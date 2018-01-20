@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Yolantele/blockchain/issues"
   },
-  "homepage": "https://github.com/Yolantele/blockchain#readme"
+  "homepage": "https://github.com/Yolantele/blockchain#readme",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
 }
