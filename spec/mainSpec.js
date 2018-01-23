@@ -15,7 +15,8 @@ describe('Block', () => {
 
   describe('calculateHash', () => {
     it('calculates hash for the block', () => {
-      expect(block.calculateHash()).toEqual(0)
+      var hash = block.calculateHash()
+      expect(hash).toEqual(jasmine.any(String))
     });
   });
 });
