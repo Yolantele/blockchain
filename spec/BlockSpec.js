@@ -1,7 +1,10 @@
+// _____BLOCK CLASS_____ :
+
 describe('Block', () => {
   var Block = require("../lib/Block");
   var block;
   var index;
+  var that;
 
   beforeEach(() => {
     block = new Block(index);
@@ -16,17 +19,7 @@ describe('Block', () => {
   describe('calculateHash', () => {
     it('calculates hash for the block', () => {
       var hash = block.calculateHash()
-      expect(hash).toEqual(jasmine.any(String))
+      expect(hash).toEqual(jasmine.any(String));
     });
   });
 });
-
-
-
-// _____ TEMPLATES _____
-
-// describe('', () => {
-//   it('', () => {
-//     expect().
-//   });
-// });
