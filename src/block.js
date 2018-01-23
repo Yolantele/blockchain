@@ -1,6 +1,7 @@
+// const SHA = require('crypto-js/sha256');
 
-const SHA = require('crypto-js/sha256');
-
-class Block {
-
+function Block () {
+  this._property = [];
 }
+
+module.exports = Block;
