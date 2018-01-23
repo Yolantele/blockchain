@@ -18,5 +18,9 @@
   "homepage": "https://github.com/Yolantele/blockchain#readme",
   "dependencies": {
     "crypto-js": "^3.1.9-1"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "jasmine": "^2.9.0"
   }
 }
