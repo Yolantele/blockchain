@@ -1,15 +1,31 @@
-describe('Block', function(){
+describe('Block', () => {
   var Block = require("../lib/Block");
   var block;
   var index;
 
-  beforeEach(function() {
+  beforeEach(() => {
     block = new Block(index);
   });
 
-  describe('initialize', function() {
-    it('has basic property assigned to empty array', function() {
+  describe('initialize', () => {
+    it('has basic property assigned to empty array', () => {
       expect(block.constructor._index).toEqual(index);
     });
   });
+
+  describe('calculateHash', () => {
+    it('calculates hash for the block', () => {
+      expect(block.calculateHash()).toEqual(0)
+    });
+  });
 });
+
+
+
+// _____ TEMPLATES _____
+
+// describe('', () => {
+//   it('', () => {
+//     expect().
+//   });
+// });
