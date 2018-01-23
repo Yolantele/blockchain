@@ -1,13 +1,15 @@
 describe('Block', function(){
+  var Block = require("../lib/Block");
   var block;
+  var index;
 
   beforeEach(function() {
-    block = new Block();
+    block = new Block(index);
   });
 
   describe('initialize', function() {
-    it('should have an empty array property', function() {
-      expect(block._property).toEqual([]);
+    it('has basic property assigned to empty array', function() {
+      expect(block.constructor._index).toEqual(index);
     });
   });
 });
