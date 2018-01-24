@@ -5,8 +5,7 @@ describe('Blockchain', () => {
 	var blockchain;
 	var blockDummy;
 
-	function BlockDummy () {
-	}
+	function BlockDummy () {};
 
 	beforeEach(() => {
 		blockchain = new Blockchain();
@@ -18,11 +17,13 @@ describe('Blockchain', () => {
 			expect(blockchain).toEqual(new Blockchain());
 		});
 	});
+
 	describe('createGenesisBlock', () => {
 		it('returns new Block', () => {
 			expect(blockchain.createGenesisBlock(BlockDummy)).toEqual(new BlockDummy);
 		});
 	});
+
 	describe('getLatestBlock', () => {
 		it('returns the last object in the chain ', () => {
       blockchain._chain.push('Object 1');
@@ -30,8 +31,13 @@ describe('Blockchain', () => {
 			expect(blockchain.getLatestBlock()).toEqual('Object 2');
 		});
 	});
+  describe('addBlock', () => {
+    it('adds new block to the chain', () => {
+      blockchain.addBlock(blockDummy)
+      expect(blockchain._chain.length).toEqual(2)
+    });
+  });
 });
-
 
 // _____ TEMPLATES _____
 
