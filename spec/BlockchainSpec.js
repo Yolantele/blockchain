@@ -5,11 +5,7 @@ describe('Blockchain', () => {
 	var blockchain;
 	var blockDummy;
 
-	var counter = 0;
-
 	function BlockDummy () {
-		// counter += 1;
-		// this.counter = counter;
 	}
 
 	beforeEach(() => {
@@ -29,7 +25,9 @@ describe('Blockchain', () => {
 	});
 	describe('getLatestBlock', () => {
 		it('returns the last object in the chain ', () => {
-			expect(blockchain.getLatestBlock()).toEqual('last block');
+      blockchain._chain.push('Object 1');
+      blockchain._chain.push('Object 2');
+			expect(blockchain.getLatestBlock()).toEqual('Object 2');
 		});
 	});
 });
